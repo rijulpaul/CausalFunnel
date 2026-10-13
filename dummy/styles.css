@@ -1,0 +1,1088 @@
+/* ============================
+   CSS Reset and Base Styles
+   ============================ */
+
+/* Reset default browser styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML and body styling */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Container class for consistent max-width and centering */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================
+   Navigation Bar Styles
+   ============================ */
+
+/* Main navigation container with fixed positioning */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Navigation container using flexbox */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo styling */
+.nav-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: #3498db;
+}
+
+/* Navigation menu using flexbox */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Navigation links styling */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Mobile hamburger menu (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* ============================
+   Hero Section with Background
+   ============================ */
+
+/* Hero section with gradient background and full viewport height */
+.hero {
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(52, 152, 219, 0.9),
+      rgba(155, 89, 182, 0.9)
+    ),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/><circle cx="200" cy="200" r="100" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="400" r="80" fill="rgba(255,255,255,0.1)"/><circle cx="1000" cy="200" r="60" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Hero content container */
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease;
+}
+
+/* Hero title styling */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero subtitle styling */
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Hero buttons container using flexbox */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator at bottom of hero */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+/* ============================
+   Button Styles
+   ============================ */
+
+/* Base button styling */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+/* Primary button (main CTA) */
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Secondary button (alternative CTA) */
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #3498db;
+}
+
+/* Full width button for forms */
+.btn-full {
+  width: 100%;
+}
+
+/* ============================
+   Services Section - CSS Grid
+   ============================ */
+
+/* Services section container */
+.services {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Section subtitle styling */
+.section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services grid using CSS Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Individual service card */
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Service icon styling */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Service card title */
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Service card description */
+.service-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* ============================
+   About Section - Flexbox
+   ============================ */
+
+/* About section container */
+.about {
+  padding: 100px 0;
+  background-color: white;
+}
+
+/* About content using flexbox */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* About text content */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.about-text p {
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Features list */
+.features-list {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.feature-icon {
+  background-color: #27ae60;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* About image section */
+.about-image {
+  flex: 1;
+}
+
+.image-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.placeholder-content span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ============================
+   Statistics Section
+   ============================ */
+
+/* Statistics section with dark background */
+.stats {
+  padding: 80px 0;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Stats grid layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+/* Individual stat item */
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ============================
+   Page Content Styles
+   ============================ */
+
+/* Main content area with top margin for fixed navbar */
+.page-content {
+  margin-top: 70px;
+}
+
+/* Page header section */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ============================
+   About Page Specific Styles
+   ============================ */
+
+/* Company story section */
+.company-story {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.story-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.story-text p {
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.story-image {
+  flex: 1;
+}
+
+/* Mission & Vision section using grid */
+.mission-vision {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.mv-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mv-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.mv-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.mv-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Team section */
+.team {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-image {
+  margin-bottom: 1.5rem;
+}
+
+.member-image .image-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.member-info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.member-role {
+  color: #3498db;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.member-bio {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   Contact Page Styles
+   ============================ */
+
+/* Contact section using flexbox */
+.contact-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.contact-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Contact information section */
+.contact-info-section {
+  flex: 1;
+}
+
+.contact-info-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.contact-info-section > p {
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Contact details list */
+.contact-details {
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-text h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.contact-text p {
+  color: #7f8c8d;
+  margin-bottom: 0.3rem;
+}
+
+/* Social section */
+.social-section h4 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #7f8c8d;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* ============================
+   Contact Form Styles
+   ============================ */
+
+/* Contact form section */
+.contact-form-section {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Form styling */
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Form row using grid */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Textarea specific styling */
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Form message styling */
+.form-message {
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================
+   FAQ Section
+   ============================ */
+
+/* FAQ section */
+.faq-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.faq-item p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* ============================
+   Call to Action Section
+   ============================ */
+
+/* CTA section */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================
+   Footer Styles
+   ============================ */
+
+/* Footer section */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+/* Footer content using grid */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer section styling */
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-section p {
+  color: #bdc3c7;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
+
+/* Contact info in footer */
+.contact-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Social links in footer */
+.footer .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer .social-link {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: rgba(52, 152, 219, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer .social-link:hover {
+  background-color: #3498db;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   Animations
+   ============================ */
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ============================
+   Responsive Design
+   ============================ */
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  /* Hide regular menu, show hamburger */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero section adjustments */
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* About and contact content stack vertically */
+  .about-content,
+  .contact-content,
+  .story-content {
+    flex-direction: column;
+  }
+
+  /* Form rows stack vertically on mobile */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats grid adjustments */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  /* Container padding adjustment */
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Typography adjustments */
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Button adjustments */
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Grid adjustments */
+  .services-grid,
+  .team-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact adjustments */
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    min-width: 120px;
+    font-size: 0.85rem;
+  }
+}

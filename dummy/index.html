@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechFlow - Modern Web Solutions</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo/Brand -->
+        <div class="nav-logo">
+          <a href="#home">TechFlow</a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section with Background Image -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Modern Web Solutions and Other things</h1>
+          <p class="hero-subtitle">
+            We create stunning websites that drive results and engage your
+            audience
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#services"
+              class="btn btn-primary"
+              style="background-color: red"
+              >Our Services</a
+            >
+            <a href="contact.html" class="btn btn-secondary">Get Started</a>
+          </div>
+        </div>
+        <!-- Scroll down indicator -->
+        <div class="scroll-indicator">
+          <a href="#services">
+            <div class="scroll-arrow"></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Services Section using CSS Grid -->
+      <section id="services" class="services">
+        <div class="container">
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">
+            We offer comprehensive web solutions that drive your business growth
+          </p>
+
+          <!-- Services Grid -->
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3>Web Design</h3>
+              <p>
+                Beautiful, responsive designs that capture your brand's essence
+                and engage your visitors.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">⚡</div>
+              <h3>Development</h3>
+              <p>
+                Fast, secure, and scalable web applications built with modern
+                technologies.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">📱</div>
+              <h3>Mobile First</h3>
+              <p>
+                Responsive designs that work perfectly on all devices and screen
+                sizes.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🚀</div>
+              <h3>SEO Optimization</h3>
+              <p>
+                Optimize your website for search engines to increase visibility
+                and traffic.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🛡️</div>
+              <h3>Security</h3>
+              <p>
+                Implement robust security measures to protect your website and
+                user data.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">📊</div>
+              <h3>Analytics</h3>
+              <p>
+                Track and analyze your website performance with detailed
+                insights and reports.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section using Flexbox -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <!-- Text Content -->
+            <div class="about-text">
+              <h2>Why Choose TechFlow?</h2>
+              <p>
+                With over 5 years of experience in web development, we've helped
+                hundreds of businesses establish their online presence and grow
+                their digital footprint.
+              </p>
+
+              <div class="features-list">
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span>Professional Design</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span>Fast Loading Speed</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span>24/7 Support</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span>SEO Optimized</span>
+                </div>
+              </div>
+
+              <a href="about.html" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <!-- Image Content -->
+            <div class="about-image">
+              <div class="image-placeholder">
+                <!-- This would contain an actual image in a real project -->
+                <div class="placeholder-content">
+                  <span>🖥️</span>
+                  <p>Team Working</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3 class="stat-number">500+</h3>
+              <p class="stat-label">Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number">100+</h3>
+              <p class="stat-label">Happy Clients</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number">5+</h3>
+              <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number">24/7</h3>
+              <p class="stat-label">Support Available</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h3>TechFlow</h3>
+            <p>
+              Creating modern web solutions that drive results and engage your
+              audience.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">📘</a>
+              <a href="#" class="social-link">🐦</a>
+              <a href="#" class="social-link">📷</a>
+              <a href="#" class="social-link">💼</a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Web Design</a></li>
+              <li><a href="#services">Development</a></li>
+              <li><a href="#services">SEO</a></li>
+              <li><a href="#services">Analytics</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+              <p>📧 info@techflow.com</p>
+              <p>📞 +1 (555) 123-4567</p>
+              <p>📍 123 Tech Street, Digital City</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 TechFlow. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+    <script src="../scripts/analytics.js"></script>
+  </body>
+</html>
