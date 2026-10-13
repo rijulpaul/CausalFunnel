@@ -1,0 +1,10 @@
+services:
+  server:
+    build:
+      context: ./server
+    environment:
+      - SERVER_PORT=3000
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017/analytics
+  mongodb:
+    image: mongo
