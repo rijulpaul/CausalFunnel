@@ -1,0 +1,20 @@
+// app/api/sessions/route.ts
+
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  const response = await fetch(
+    `${process.env.BACKEND_URL}/api/sessions`,
+  );
+
+  if (!response.ok) {
+    return NextResponse.json(
+      { error: "Failed to fetch sessions" },
+      { status: response.status },
+    );
+  }
+
+  const data = await response.json();
+
+  return NextResponse.json(data);
+}
