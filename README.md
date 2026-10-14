@@ -1,6 +1,24 @@
 # CausalFunnel — User Analytics Application
 
+
+### Deployments
+
+- Backend 
+  - HTTPS: `https://13.201.186.251/`  [Self signed SSL certificate]
+  - HTTP: `http://13.201.186.251:3000/`
+
+- Analytics script
+  - `https://int-analytics-12312.s3.ap-south-1.amazonaws.com/analytics.js`
+  - To use the script add the following line to your webpage  
+```html
+<script src="https://int-analytics-12312.s3.ap-south-1.amazonaws.com/analytics.js"></script>
 ```
+
+- Dashboard
+- `https://causalfunnel-dashboard-sigma.vercel.app/`
+
+```
+
 Visitor browser                          Backend                          Dashboard
 ───────────────────────────────────────────────────────────────────────────────────────
 ┌──────────────────────────┐   POST      ┌──────────────────────┐   HTTP   ┌──────────────┐

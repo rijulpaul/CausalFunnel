@@ -10,12 +10,17 @@ const devices = {
   desktop: [1280, 720],
 };
 
+type ClickPoint = {
+  x: number;
+  y: number;
+};
+
 export default function HeatmapDashboard() {
   const [url, setUrl] = useState("");
   const [width, setWidth] = useState(devices.desktop[0]);
   const [height, setHeight] = useState(devices.desktop[1]);
   const [urlError, setUrlError] = useState("");
-  const [clickData, setClickData] = useState();
+  const [clickData, setClickData] = useState<ClickPoint[]>([]);
   const [pages, setPages] = useState();
 
   const isMobile = width === devices.mobile[0];
@@ -38,7 +43,6 @@ export default function HeatmapDashboard() {
       .then((res) => res.json())
       .then((res) => {
         const points = res.clicks.map(({ x, y }: { x: number; y: number }) => {
-          console.log(x * width, y * height);
 
           return {
             x: x,
