@@ -1,24 +1,6 @@
 # CausalFunnel — User Analytics Application
 
-
-### Deployments
-
-- Backend 
-  - HTTPS: `https://13.201.186.251/`  [Self signed SSL certificate]
-  - HTTP: `http://13.201.186.251:3000/`
-
-- Analytics script
-  - `https://int-analytics-12312.s3.ap-south-1.amazonaws.com/analytics.js`
-  - To use the script add the following line to your webpage  
-```html
-<script src="https://int-analytics-12312.s3.ap-south-1.amazonaws.com/analytics.js"></script>
 ```
-
-- Dashboard
-- `https://causalfunnel-dashboard-sigma.vercel.app/`
-
-```
-
 Visitor browser                          Backend                          Dashboard
 ───────────────────────────────────────────────────────────────────────────────────────
 ┌──────────────────────────┐   POST      ┌──────────────────────┐   HTTP   ┌──────────────┐
@@ -58,19 +40,6 @@ causalfunnel/
 ---
 
 ## 🚀 Getting Started
-
-### Option A — Docker Compose (one command)
-
-> ⚠️ **Note on the current compose file:** the `server`, `dashboard`, and `mongodb` services are defined and will build/start, but the file does **not yet publish host ports or persist MongoDB data** (see [Trade-offs](#assumptions--trade-offs)). If you want to browse the dashboard, add `ports:` mappings (e.g. `"localhost:3000:3000"` for the server, `"localhost:3100:3000"` for the dashboard) and a named volume for `mongodb:/data/db`. This is currently tracked in `TODO` (`docker compose how to save and interact with db`).
-
-```bash
-docker compose up --build
-```
-
-- API + health: `http://localhost:3000` (once ports are mapped)
-- Dashboard: `http://localhost:3100`
-
-### Option B — Manual (recommended for development)
 
 You'll need: **Node.js 18+**, a running **MongoDB** (local or Docker), and npm.
 
